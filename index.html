@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+		*{margin: 0;padding: 0;border: 0;list-style: none;}
+		a{text-decoration: none;color:black ;}
+		.nokia{position: relative;top:26px;left: 23%;}
+		.menu>ul{position: relative;left: 15%;}
+		.menu>ul>li{display: inline-block;font-size: 15px;font-weight: 300;margin-right: 10px;height: 70px;line-height: 70px;position: relative;bottom: 24px;}
+		.menu>ul>li>a:hover{color: blue;transition: 0.3s;}
+		.company>ul{display: none;position: relative;right: -250%;top:72px;background-color: white;z-index: 99;}
+		.company>ul>li{width: 200px;height: 35px;line-height: 35px;font-size: 15px;font-weight: 300;}
+		.company>ul>li>a:hover{color: #0000FF;}
+		.Investors>ul{display: none;position: relative;right: -250%;top:72px;background-color: white;z-index: 99;}
+		.Investors>ul>li{width: 200px;height: 35px;line-height: 35px;font-size: 15px;font-weight: 300;}
+		.Investors>ul>li>a:hover{color: #0000FF;}
+		.menu>ul>li:hover>.Investors>ul{display: block;position: absolute;width:430px;height: 290px;padding: 0 30px 0 30px;}
+		.Careers>ul{display: none;position: relative;right: -200%;top:72px;background-color: white;z-index: 99;}
+		.Careers>ul>li{width: 250px;height: 35px;line-height: 35px;font-size: 15px;font-weight: 300;}
+		.Careers>ul>li>a:hover{color: #0000FF;}
+		.menu>ul>li:hover>.Careers>ul{display: block;position: absolute;width:280px;height: 200px;padding: 0 30px 0 30px;}
+		.Sustainability>ul{display: none;position: relative;right: -250%;top:72px;background-color: white;z-index: 99;}
+		.Sustainability>ul>li{width: 300px;height: 35px;line-height: 35px;font-size: 15px;font-weight: 300;}
+		.Sustainability>ul>li>a:hover{color: #0000FF;}
+		.menu>ul>li:hover>.Sustainability>ul{display: block;position: absolute;width:500px;height: 270px;padding: 0 30px 0 30px;}
+		.newsroon>ul>li>a:hover{color: #0000FF;}
+		.menu>ul>li:hover>.company>ul{display: block;position: absolute;width:430px;height: 290px;padding: 0 30px 0 30px;}
+		.menu{position:relative;left: 23%;}
+		.li-right{float: right;position: relative;bottom: 180px;}
+		.li-right2{float: right;position: relative;bottom: 180px;}
+		.li-right3{float: right;position: relative;bottom: 107px;left: 202px;border-bottom: 1px solid #ffffff;}
+		.li-right4{float: right;position: relative;bottom: 180px;border-bottom: 1px solid #e6e6e6;}
+		.li-right5{float: right;position: relative;bottom: 180px;border-bottom: 1px solid #e6e6e6;}
+		.li-right6{float: right;position: relative;bottom: 143px;left: 152px;}
+		.newsroon>ul{display: none;position: relative;left: -200%;top:72px;background-color: white;z-index: 99;}
+		.menu>ul>li:hover>.newsroon>ul{display: block;position: absolute;width: 400px;height: 250px;padding: 0 30px 0 30px;}
+		.newsroon>ul>li{width: 180px;height: 35px;line-height: 35px;font-size: 15px;font-weight: 300;}
+		.li-box-right{float: right;}
+		.icon>ul>li{display: inline-block;position: relative;left: 70%;bottom: 70px;margin-right: 25px;}
+		.head{width: 100%;}
+		.head-top{height: 70px;}
+		.border-right{border-right:1px solid #000 ;width: 40px;height: 14px;}
+		.head-bottom{width: 100%;height: 30px;background-color:#edf2f5;}
+		.head-bottom>ul{position: relative;left: 23%;top: 20%;}
+		.head-bottom>ul>li{font-size: 3px;display: inline-block;font-weight: 200;}
+		.bg{width: 100%;height:360px;background-image: url(img/01.jpg);background-size: 100%;background-repeat: no-repeat;}
+		.bg>h1{color: white;font-weight:350;position: relative;top: 30%;left: 23%;font-size: 35px;}
+		.button{width: 130px;height: 40px;border: 1px solid #0065ed;border-radius: 3px;line-height: 40px;text-align: center;color: #0065ED;font-weight: 300;position: relative;left: 140px;top: 30px;}
+		.button:hover{transform: scale(1.1);transition: 0.5s;}
+		.button2{width: 130px;height: 40px;border: 1px solid #0065ed;border-radius: 3px;line-height: 40px;text-align: center;color: #0065ED;font-weight: 300;position: relative;left: 140px;top: 10px;}
+		.button3{width: 130px;height: 40px;border: 1px solid #0065ed;border-radius: 3px;line-height: 40px;text-align: center;color: #0065ED;font-weight: 300;position: relative;left: 150px;top:30px;}
+		.button3:hover{transform: scale(1.1);transition: 0.5s;}
+		.button2:hover{transform: scale(1.1);transition: 0.5s;}
+		.line{border-bottom: 1px solid #e6e6e6;}
+		.newsroon>ul{background-color: white;}
+		.button3>p{position: relative;bottom: 35px;}
+		.button4{width: 130px;height: 40px;border: 1px solid #0065ed;border-radius: 3px;line-height: 40px;text-align: center;color: #0065ED;font-weight: 300;position: relative;left: 180px;top:25px;}
+		.button4:hover{transform: scale(1.1);transition: 0.5s;}
+		.button5{width: 130px;height: 40px;border: 1px solid #0065ed;border-radius: 3px;line-height: 40px;text-align: center;color: #0065ED;font-weight: 300;position: relative;left: 80px;top:25px;}
+		.button5:hover{transform: scale(1.1);transition: 0.5s;}
+		.separate{width: 100%;height: 82px;}
+		.separate-blank{width: 100%;height:25px;}
+		.separate-menu{width: 100%;height:55px;}
+		.separate-underline{width: 1000px;height: 54px;border-bottom: 1px solid #e6e6e6;margin-left: 23%;}
+		.separate-underline>ul>li{display:inline-block;line-height: 54px;font-size: 15px;font-weight: 300;margin-right: 35px;}
+		.separate-underline>ul>li>a:hover{color: blue;transition: 0.3s;}
+		.blank{width:100%;height:35px;}
+		.Me{color: #094391;font-size: 2px;font-weight: 100;position: relative;bottom: 3px;}
+		.content-top1{width: 100%;height:485px;}
+		.content-top2{width: 1000px;height: 485px;margin-left: 23%;}
+		.content-top3{width: 1000px;height: 435px;margin-top: 25px;}
+		.content-top-picture{width:500px;height: 435px;text-align: center;float:left;}
+		.picture>a>img{width:480px;}
+		.picture:hover img{transform: scale(1.2);transition: 0.5s;}
+		.picture{width: 480px;height:310px;overflow: hidden;margin-top: 50px;}
+		.picture:hover{box-shadow:0px 0px 17px 17px #dedede;transition: 0.5s all;}
+		.content-top-text-frame{width:490px;height: 435px;float:left;}
+		.content-top-text{width:490px;height: 435px;}
+		.content-top-text>p{font-size: 13.5px;color: #1d1e20;margin: 25px 0 0 0 ;}
+		.content-body1{width: 100%;height: 770px;}
+		.content-body2{width: 100%;height: 730px;margin-top: 20px;}
+		.content-body3{width: 1010px;height: 730px;margin-left: 23%;background-color: #edf2f5;}
+		.content-body4{width: 270px;height: 730px;float: left;margin-left: 30px;}
+		.content-body5{width: 650px;height: 730px;float: left;margin-left: 30px;}
+		.content-body4-picture1{width: 270px;height: 320px;overflow: hidden;}
+		.content-body4-picture1:hover img{transform: scale(1.2);transition: 0.5s;}
+		.content-body4-picture2{width: 270px;height: 320px;overflow: hidden;}
+		.content-body4-picture2:hover img{transform: scale(1.2);transition: 0.5s;}
+		.picture2{width: 270px;height: 320px;overflow: hidden;margin-top: 30px;}
+		.picture2:hover{box-shadow:0px 0px 17px 17px #d5d5d5;transition: 0.5s all;}
+		.picture3{width: 270px;height: 320px;overflow: hidden;margin-top: 30px;}
+		.picture3:hover{box-shadow:0px 0px 17px 17px #d5d5d5;transition: 0.5s all;}
+		.content-body4-picture2{width: 270px;height: 320px;}
+		.content-body5-picture1{width: 650px;height: 400px;float: left;}
+		.content-body5-picture2{width: 308px;height: 240px;float: left;}
+		.content-body5-picture3{width: 308px;height: 240px;float: left;}
+		.content-body4-text>p{color: white;font-size: 22px;font-weight: 300;}
+		.content-body4-text{position:relative;bottom: 305px;z-index: 999;left: 25px;}
+		.content-body4-text2>p{color: white;font-size: 15px;font-weight: 300;}
+		.content-body4-text2{position:relative;bottom: 295px;z-index: 999;left: 25px;width: 230px;}
+		.content-body5-text>p{color: white;font-size: 22px;font-weight: 300;}
+		.content-body5-text{position:relative;bottom: 384px;z-index: 999;left: 28px;}
+		.content-body5-text2>p{color: white;font-size: 15px;font-weight: 300;}
+		.content-body5-text2{position:relative;bottom: 374px;z-index: 999;left: 28px;width: 230px;}
+		.picture4{width: 650px;height: 400px;overflow: hidden;margin-top: 30px;}
+		.picture4:hover{box-shadow:0px 0px 17px 17px #d5d5d5;transition: 0.5s all;}
+		.content-body5-picture1{width: 650px;height: 400px;;overflow: hidden;}
+		.content-body5-picture1:hover img{transform: scale(1.2);transition: 0.5s;}
+		.content-body5-text3>p{color: white;font-size: 22px;font-weight: 300;}
+		.content-body5-text3{position:relative;bottom: 225px;z-index: 999;left: 25px;}
+		.content-body5-text4>p{color: white;font-size: 15px;font-weight: 300;}
+		.content-body5-text4{position:relative;bottom: 220px;z-index: 999;left: 25px;width: 230px;}
+		.picture5{width: 308px;height: 240px;overflow: hidden;margin-top: 30px;float: left;}
+		.picture5:hover{box-shadow:0px 0px 17px 17px #d5d5d5;transition: 0.5s all;}
+		.content-body5-picture2{width: 308px;height: 240px;overflow: hidden;}
+		.content-body5-picture2:hover img{transform: scale(1.2);transition: 0.5s;}
+		.picture6{width: 308px;height: 240px;overflow: hidden;margin-top: 30px;float: left;margin-left: 30px;}
+		.picture6:hover{box-shadow:0px 0px 17px 17px #d5d5d5;transition: 0.5s all;}
+		.content-body5-picture3{width: 308px;height: 240px;overflow: hidden;}
+		.content-body5-picture3:hover img{transform: scale(1.2);transition: 0.5s;}
+		.content-body-foot1{width: 100%;height:400px;}
+		.content-body-foot2{width: 100%;height:320px;margin-top: 40px;}
+		.content-body-foot3{width: 1050px;height:320px;margin-left: 23%;}
+		.tail{width: 232.5px;height: 320px;float: left;margin-right: 25px;}
+		.front{width: 232.5px;height: 50px;border: 1px solid #ffffff;}
+		.front>p{font-size: 10px;font-weight: bold;color: #676767;margin-top: 18px;}
+		.middle{width: 232.5px;height: 182.5px;overflow: hidden;}
+		.behind{width: 232.5px;height: 70px;}
+		.behind>h4{color: #0055ff;font-weight: 500;margin-top: 19px;}
+		.tail:hover img{transform: scale(1.2);transition: 0.5s;}
+		.tail:hover .middle{box-shadow:0px 0px 17px 17px #dddddd;transition: 0.5s all;}
+		.foot1{width: 100%;height: 660px;background-color: #001135;border: 1px solid #001135;}
+		.foot2{width: 100%;height: 600px;background-color: #001135;margin-top: 30px;border: 1px solid #001135;}
+		.foot3{width: 1020px;height: 600px;background-color: #001135;margin-left: 23%;border: 1px solid #001135;}
+		.nk{width: 1020px;height: 60px;}
+		.nka{width: 1020px;height: 25px;margin-top: 25px;}
+		.ic{width: 1020px;height: 80px;border-bottom: 2px solid #263453;}
+		.icn{width: 250px;height: 40px;float: left;margin-right: 20px;}
+		.icon-foot>li{display: inline;}
+		.cricle3{width: 17px;height: 17px;border-radius: 25px;border: 2px solid #263453;padding: 7px;margin-right: 12px;}
+		.cricle{width: 30px;height: 30px;border-radius: 25px;border: 2px solid #263453;margin-right: 12px;}
+		.cricle:hover>g>g{fill: #000000;}.A:hover{background-color: #FFFFFF;}.B:hover>g>path{fill: #000000;}
+		.cricle2:hover{background-color: #FFFFFF;}
+		.cricle2{width: 30px;height: 30px;border-radius: 25px;border: 2px solid #263453;margin-right: 12px;}
+		.cricle3:hover>path{fill: #000000;}
+		.cricle3:hover{background-color: #FFFFFF;}
+		.cricle:hover{background-color: #FFFFFF;}
+		.cricle2:hover>g>path{fill: #000000;}
+		.media{width: 200px;height: 40px;float: left;line-height: 40px;}
+		.media>a>p{color:#9da3b0;font-size: 13px;border: 1px solid #001135;text-align: center;}
+		.media>a>p:hover{color: #0074a1;transition: 0.5s;border: 1px solid #001135;}
+		.inbox{width: 300px;height: 40px;float: left;margin-left: 30px;border: 1px solid #001135;}
+		.inbox>p{color:#9da3b0;font-size: 13px;}
+		.sub{width: 200px;height: 80px;float: left;margin-left: 11px;border: 1px solid #001135;}
+		.sub2{width: 160px;height: 40px;border: 1px solid #ffffff;border-radius: 3px;float: right;margin-right: 15px;}
+		.sub2>p{color: white;text-align: center;line-height: 40px;font-size: 12px;}
+		.sub2:hover{transform: scale(1.2);transition: 0.8s;background-color: white;}
+		.sub2>p:hover{color:#0088b9;}
+		.foot-box{width: 165px;height: 350px;border: 1px solid #001135;float: left;margin-right: 20px;}
+		.blank-f{width: 100%;height: 30px;}
+		/* .btt{z-index: 999999;position: absolute;left: 34.5%;top: 86%;} */
+		.first{font-size: 13px;color: white;margin: 5px 0 30px 0;}
+		.foot-box>ul>a>li{color: #9da3b0;font-size: 9px;margin-bottom: 30px;font-weight: 500;}
+		.foot-box>ul>a>li:hover{color:#0088b9 ;transition: 0.8s;}
+		.foot-box>ul>a>h3:hover{color:#0088b9 ;transition: 0.8s;}
+		.end{width: 500px;height: 20px;border: 1px solid #001135;float: right;margin-top: 20px;}
+		.end>ul>a>li{color: #9da3b0;display: inline;font-size: 5px;margin-right: 15px;}
+		.end>ul>a>li:hover{color: #0088b9;transition: 0.8s;}
+		@media screen and (min-width:980px) and (max-width:1281px){
+			.foot3{margin-left: 23%;}
+			.content-body-foot3{margin-left: 23%;}
+			.content-body3{margin-left: 23%;}
+			.content-top2{margin-left: 23%;}
+			.separate-underline{margin-left: 23%;}
+			.nokia{position: relative;top:26px;left: 23%;}
+			.menu{position:relative;left: 23%;}
+			.bg{width: 100%;height:360px;background-image: url(img/01.jpg);background-size: 100%;background-repeat: no-repeat;}
+			.bg>h1{color: white;font-weight:350;position: relative;top: 30%;left: 23%;font-size: 35px;}
+			.head-bottom>ul{position: relative;left: 23%;top: 20%;}
+		}
+		@media screen and (min-width:760px) and (max-width:981px){
+			.foot3{margin-left: 18%;}
+			.content-body-foot3{margin-left: 18%;}
+			.content-body3{margin-left: 18%;}
+			.content-top2{margin-left: 18%;}
+			.separate-underline{margin-left: 18%;}
+			.nokia{position: relative;top:26px;left: 18%;}
+			.menu{position:relative;left: 18%;}
+			.bg{width: 100%;height:200px;background-image: url(img/01.jpg);background-size: 100%;background-repeat: no-repeat;}
+			.bg>h1{color: white;font-weight:350;position: relative;top: 30%;left: 18%;font-size: 35px;}
+			.head-bottom>ul{position: relative;left: 18%;top: 20%;}
+			.icon>ul>li{display: none;}
+		}
+		@media screen and (min-width:540px) and (max-width:761px){
+			.foot3{margin-left: 5%;}
+			.content-body-foot3{margin-left: 5%;}
+			.content-body3{margin-left: 5%;}
+			.content-top2{margin-left: 5%;}
+			.separate-underline{margin-left: 5%;}
+			.nokia{position: relative;top:26px;left: 5%;}
+			.menu{position:relative;left: 10%;}
+			.bg{width: 100%;height:180px;background-image: url(img/01.jpg);background-size: 100%;background-repeat: no-repeat;}
+			.bg>h1{color: white;font-weight:350;position: relative;top: 30%;left: 5%;font-size: 35px;}
+			.head-bottom>ul{position: relative;left: 5%;top: 20%;}
+			.icon>ul>li{display: none;}
+		}
+		@media screen and (max-width:540px){
+			.foot3{margin-left: 5%;}
+			.content-body-foot3{margin-left: 5%;}
+			.content-body3{margin-left: 5%;}
+			.content-top2{margin-left: 5%;}
+			.separate-underline{margin-left: 5%;}
+			.nokia{position: relative;top:26px;left: 5%;}
+			.menu{position:relative;left: 10%;}
+			.bg{width: 100%;height:120px;background-image: url(img/01.jpg);background-size: 100%;background-repeat: no-repeat;}
+			.bg>h1{color: white;font-weight:350;position: relative;top: 30%;left: 5%;font-size: 35px;}
+			.head-bottom>ul{position: relative;left: 5%;top: 20%;}
+			.icon>ul>li{display: none;}
+		}
+		</style>
+	</head>
+	<body>
+			<div class="content">
+				<div class="head-top">
+					<div class="nokia"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 134.84" width="100" height="20" aria-label="Nokia logo" focusable="false">
+							<path fill="#124191" d="M38.52 133.18H0V2.18H66.62L143.05 99.98V2.18H181.57V133.18H116.3L38.52 33.71V133.18M365.87 92.67C365.87 110.88 362.65 117.16 357.32 123.18C349.15 132.14 337.26 134.84 314.35 134.84L248.58 134.84C225.67 134.84 213.76 132.14 205.6 123.18C200.27 117.16 197.05 110.88 197.05 92.67L197.05 42.17C197.05 23.97 200.27 17.7 205.6 11.67C213.77 2.7 225.67 0 248.58 0L314.35 0C337.26 0 349.15 2.7 357.32 11.67C362.65 17.7 365.87 23.97 365.87 42.17L365.87 92.67M312.73 101.65C321.53 101.65 324.63 101.13 326.74 99.21C328.71 97.42 329.58 95.11 329.58 87.41L329.58 47.43C329.58 39.73 328.71 37.44 326.74 35.64C324.63 33.71 321.53 33.2 312.73 33.2L250.19 33.2C241.39 33.2 238.29 33.71 236.19 35.64C234.21 37.44 233.34 39.73 233.34 47.43L233.34 87.41C233.34 95.11 234.21 97.42 236.19 99.21C238.29 101.13 241.39 101.65 250.19 101.65L312.73 101.65V101.65M421.85 2.18V133.18H381.6V2.18H421.85M489.85 2.18H542.99L471.27 63.45 552.16 133.18H495.3L421.85 64.86 489.85 2.18M559.58 2.18H599.84V133.18H559.58M753.31 133.18 741.4 110.36H663.51L651.74 133.17H607.27L678.62 2.18H728.66L800 133.18H753.31M677.5 81.91H727.55L702.52 34.48 677.5 81.91">
+								</path>
+						</svg></a>
+					</div>
+				<div class="menu">
+					<ul>
+						<li><a href="#">Company 	<svg t="1648519128748" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2188" width="12" height="12"><path d="M927 416.1h-64.1L513 848.8 161.4 416.1H97l416.1 512.1z" fill="#000000" p-id="2189"></path></svg></a>
+						<div class="company">
+						<ul>
+							<li class="line"><a href="#">Worldwide presence</a></li>
+							<li class="line"><a href="#">Nokia's strategy</a></li>
+							<li class="line"><a href="#">Leadership and govermance</a></li>
+							<li class="line"><a href="#">Our history</a></li>
+							<li><a href="#">Achievements</a></li>
+							<li class="li-right"><a href="#">Government relations</a></li>
+							<a href="#"><div class="button">Company</div></a>
+						</ul>
+						</div>
+						</li>
+						<li><a href="#">Newsroon 	<svg t="1648519128748" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2188" width="12" height="12"><path d="M927 416.1h-64.1L513 848.8 161.4 416.1H97l416.1 512.1z" fill="#000000" p-id="2189"></path></svg></a>
+						<div class="newsroon">
+							<ul>
+								<li class="line"><a href="#">News releases</a></li>
+								<li class="line"><a href="#">Events calendar</a></li>
+								<li class="line"><a href="#">Tech explained</a></li>
+								<li class="line"><a href="#">Social media</a></li>
+								<li><a href="#">Nokia blog</a></li>
+								<li class="li-right2"><a href="#">Media resources</a></li>
+								<a href="#"><div class="button2">Newsroon</div></a>
+							</ul>
+						</div>
+						</li>
+						<li><a href="#">Investors 	<svg t="1648519128748" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2188" width="12" height="12"><path d="M927 416.1h-64.1L513 848.8 161.4 416.1H97l416.1 512.1z" fill="#000000" p-id="2189"></path></svg></a>
+						<div class="Investors">
+							<ul>
+								<li class="line"><a href="#">Stock informations</a></li>
+								<li class="line"><a href="#">Results and reports</a></li>
+								<li class="line"><a href="#">SEC Filings</a></li>
+								<li class="line"><a href="#">Debt information</a></li>
+								<li><a href="#">Analyst coverage</a></li>
+								<li class="li-right4"><a href="#">Acquisitons & divestments</a></li>
+								<li class="li-right3"><a href="#">IR events</a></li>
+								<li class="li-right4"><a href="#">Investor relations team</a></li>
+								<a href="#"><div class="button3"><p>Investors</p></div></a>
+							</ul>
+						</div>
+						</li>
+						<li><a href="#">Sustainability 	<svg t="1648519128748" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2188" width="12" height="12"><path d="M927 416.1h-64.1L513 848.8 161.4 416.1H97l416.1 512.1z" fill="#000000" p-id="2189"></path></svg></a>
+						<div class="Sustainability">
+							<ul>
+								<li class="line"><a href="#">Our approach</a></li>
+								<li class="line"><a href="#">Improving lives</a></li>
+								<li class="line"><a href="#">Combating climate change</a></li>
+								<li class="line"><a href="#">Conducting our business with integrity</a></li>
+								<li><a href="#">Culture-Respecting people</a></li>
+								<li class="li-right5"style="width: 150px;"><a href="#">Downloads</a></li>
+								<li class="li-right6"style="width: 150px;><a href="#">Articles</a></li>
+								<a href="#"><div class="button4">Sustainability</div></a>
+							</ul>
+						</div>
+						</li>
+						<li><a href="#">Careers 	<svg t="1648519128748" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2188" width="12" height="12"><path d="M927 416.1h-64.1L513 848.8 161.4 416.1H97l416.1 512.1z" fill="#000000" p-id="2189"></path></svg></a>
+						<div class="Careers">
+							<ul>
+								<li class="line"><a href="#">Life Nokia</a></li>
+								<li class="line"><a href="#">Our opportunities</a></li>
+								<li><a href="#">Student graduate opportunities</a></li>
+								<a href="#"><div class="button5">Careers</div></a>
+							</ul>
+						</div>
+						</li>
+					</ul>
+				</div>
+				<div class="icon">
+					<ul>
+					<li>
+						<a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20">
+						    <path fill="#094391" d="M19.958 9.474a9.92 9.92 0 0 0-.924-3.685 10.154 10.154 0 0 0-.568-1.052A9.932 9.932 0 0 0 10 0C6.429 0 3.277 1.895 1.513 4.737c-.21.337-.4.695-.568 1.052a10.343 10.343 0 0 0-.924 3.685C.021 9.642 0 9.832 0 10c0 .168 0 .358.021.526.084 1.306.4 2.548.924 3.685.168.357.358.715.568 1.052C3.277 18.105 6.429 20 10 20c3.571 0 6.723-1.895 8.487-4.737.21-.337.4-.695.568-1.052.525-1.137.84-2.38.924-3.685 0-.168.021-.358.021-.526 0-.168-.021-.358-.042-.526zm-17.164 5.79h2.731c.42 1.304.988 2.42 1.68 3.22a8.758 8.758 0 0 1-4.41-3.22zM17.206 4.736h-2.731c-.42-1.305-.988-2.421-1.68-3.221a8.758 8.758 0 0 1 4.41 3.22zm-3.004 4.737h-3.677V5.789h3.151c.295 1.116.484 2.358.526 3.685zm-.505 4.737h-3.15v-3.685h3.655a17.925 17.925 0 0 1-.505 3.685zM5.82 10.526h3.656v3.685H6.324a15.446 15.446 0 0 1-.505-3.685zm.484-4.737h3.15v3.685H5.82c.021-1.327.21-2.569.484-3.685zm7.058-1.052h-2.836v-3.6c1.156.316 2.164 1.684 2.836 3.6zm-3.886-3.6v3.6H6.639c.672-1.916 1.68-3.284 2.836-3.6zM6.639 15.263h2.836v3.6c-1.156-.316-2.164-1.684-2.836-3.6zm3.886 3.6v-3.6h2.836c-.672 1.916-1.68 3.284-2.836 3.6zM7.185 1.516c-.693.82-1.26 1.916-1.68 3.22H2.772a8.939 8.939 0 0 1 4.412-3.22zM5.21 5.789a19.602 19.602 0 0 0-.462 3.685H1.092a9.095 9.095 0 0 1 1.03-3.685H5.21zm-.462 4.737c.042 1.327.189 2.548.462 3.685H2.122a9.095 9.095 0 0 1-1.03-3.685h3.656zm8.067 7.958c.693-.82 1.26-1.916 1.68-3.22h2.732a8.939 8.939 0 0 1-4.412 3.22zm1.975-4.273a16.66 16.66 0 0 0 .462-3.685h3.656a9.095 9.095 0 0 1-1.03 3.685H14.79zm.462-4.737a19.602 19.602 0 0 0-.462-3.685h3.088a8.776 8.776 0 0 1 1.03 3.685h-3.656z"></path>
+						</svg>
+						</a>
+					</li>
+					<li>	
+						<a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 22 22">
+						<g fill="none" fill-rule="evenodd" stroke="#094391" stroke-width="2" transform="translate(1 1)">
+						<path d="M19.412 19.412l-6.471-6.471"></path>
+						<circle cx="7.647" cy="7.647" r="7.647"></circle>
+						</g>
+						</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#"><span class="toggle-hamburger-desktop"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 22 16" focusable="false">
+						<g fill="none" fill-rule="evenodd">
+						<path fill="#094391" d="M1 14h20v2H1zM1 8h20v2H1z"></path>
+						<path stroke="#094391" stroke-width="2" d="M1 4l10-3 10 3"></path>
+						</g>
+						</svg>
+						<span class="Me">Menu</span>
+						</span>
+						</a>
+					</li>
+					</ul>
+				</div>
+			</div>
+			<div class="head-bottom">
+				<ul>
+					<li class="border-right"><a href="#">Home</a></li>
+					<li><a>About us</a></li>
+				</ul>
+			</div>
+			<div class="bg">
+				<h1>About us</h1>
+			</div>
+			<div class="separate">
+				<div class="separate-blank"></div>
+					<div class="separate-menu">
+						<div class="separate-underline">
+							<ul>
+								<li><a href="#">Company</a></li>
+								<li><a href="#">Newsroom</a></li>
+								<li><a href="#">Investors</a></li>
+								<li><a href="#">Sutainability</a></li>
+								<li><a href="#">Securiti and privacy</a></li>
+								<li><a href="#">Careers</a></li>
+							</ul>
+						</div>
+					</div>
+			</div>
+			<div class="blank"></div>
+			<div class="content-top1">
+				<div class="content-top2">
+					<div class="content-top3">
+						<div class="content-top-picture">
+							<div class="picture">
+								<a href="https://www.nokia.com/about-us/"><img src="img/02.jpg">
+								
+								<!-- <div class="btt">
+									<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" focusable="false">
+									    <g fill="none" fill-rule="evenodd">
+									        <path fill="#ffffff" d="M24 48c13.255 0 24-10.745 24-24 0-3.44-.724-6.71-2.027-9.668C42.254 5.892 33.815 0 24 0 10.745 0 0 10.745 0 24s10.745 24 24 24z"></path>
+									        <path fill="#1D1E20" d="M19 19v12l12-6z"></path>
+									    </g>
+									</svg>
+								</div> -->
+								</a>
+							</div>
+						</div>
+						<div class="content-top-text-frame">
+							<div class="content-top-text">
+								<p>At Nokia, we create technology that helps the world act together.</p>
+								<p>The world is facing fundamental challenges. Pressure on the planet is increasing, productivity is stalling and access to opportunity remains stubbornly unequal. Technology is central to the solution.</p>
+								<p>Through technology leadership and trusted partnerships, we deliver critical networks to help address global issues.  We have the power to bring together the world’s people, machines and devices, sensing and acting in real time at massive scale. Our critical networks go beyond connectivity to enable self-optimizing, intelligent systems both locally and globally.</p>
+								<p>With our customers we deliver solutions that respond to climate change through more efficient use and re-use of the world’s resources, restore productivity growth by bringing digital to the physical industries it has not yet reached and provide more inclusive access globally to work, healthcare and education.</p>
+								<p>We create meaningful interactions to drive human progress.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-body1">
+				<div class="content-body2">
+					<div class="content-body3">
+						<div class="content-body4">
+								<div class="picture2">
+							<a href="#"><div class="content-body4-picture1">
+							<img src="img/03.jpg"style="width: 270px;height: 320px;">
+								<div class="content-body4-text">
+									<p>Sustainability</p>
+								</div>
+								<div class="content-body4-text2">
+									<p>Improving lives and enabling a healthier planet</p>
+								</div>
+							</div></a>
+								</div>
+								<div class="picture3">
+							<a href="#"><div class="content-body4-picture2">
+								<img src="img/05.jpg"style="width: 270px;height: 320px;">
+									<div class="content-body4-text">
+										<p>Life at Nokia</p>
+									</div>
+									<div class="content-body4-text2">
+										<p>Discover where you want to be</p>
+									</div>
+							</div></a></div>
+						</div>
+						<div class="content-body5">
+							<div class="picture4">
+							<a href="#"><div class="content-body5-picture1">
+								<img src="img/04.jpg"style="width: 650px;height: 400px;">
+								<div class="content-body5-text">
+									<p>Innovation</p>
+								</div>
+								<div class="content-body5-text2">
+									<p>Creating technology that drives human progress</p>
+								</div>
+							</div></a>
+							</div>
+							<div class="picture5">
+							<a href="#"><div class="content-body5-picture2">
+								<img src="img/06.jpg"style="width: 308px;height: 240px;">
+								<div class="content-body5-text3">
+									<p>Achievements</p>
+								</div>
+								<div class="content-body5-text4">
+									<p>Recognition for making a difference</p>
+								</div>
+							</div>
+							</a>
+							</div>
+							<div class="picture6">
+							<a href="#">
+							<div class="content-body5-picture3">
+								<img src="img/07.jpg"style="width: 308px;height: 240px;">
+								<div class="content-body5-text3">
+									<p>Our presence</p>
+								</div>
+								<div class="content-body5-text4">
+									<p>Delivering a worldwide impact</p>
+								</div>
+							</div>
+							</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-body-foot1">
+				<div class="content-body-foot2">
+					<div class="content-body-foot3">
+						<a href="#"><div class="tail">
+							<div class="front">
+								<p>For consumers</p>
+							</div>
+							<div class="middle">
+								<img src="img/08.jpg"style="width: 232.5px;height: 182.5px;">
+							</div>
+							<div class="behind">
+								<h4>Shop Nokia</h4>
+							</div>
+						</a></div>
+						<a href="#"><div class="tail">
+							<div class="front">
+								<p>Enabling service providers</p>
+							</div>
+							<div class="middle">
+								<img src="img/09.jpg"style="width: 232.5px;height: 182.5px;">
+							</div>
+							<div class="behind">
+								<h4>Explore networking solutions</h4>
+							</div>
+						</a></div>
+						<a href="#"><div class="tail">
+							<div class="front">
+								<p>Partnering with industries</p>
+							</div>
+							<div class="middle">
+								<img src="img/10.jpg"style="width: 232.5px;height: 182.5px;">
+							</div>
+							<div class="behind">
+								<h4>Transform enterprise networks</h4>
+							</div>
+						</a></div>
+						<a href="#"><div class="tail">
+							<div class="front">
+								<p>Providing licensing opportunities</p>
+							</div>
+							<div class="middle">
+								<img src="img/11.jpg"style="width: 232.5px;height: 182.5px;">
+							</div>
+							<div class="behind">
+								<h4>Differentiate your products</h4>
+							</div>
+						</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="foot1">
+				<div class="foot2">
+					<div class="foot3">
+						<div class="nk">
+							<div class="nka">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 134.84" width="100" height="20" aria-label="Nokia logo" focusable="false">
+								  <path fill="#ffffff" d="M38.52 133.18H0V2.18H66.62L143.05 99.98V2.18H181.57V133.18H116.3L38.52 33.71V133.18M365.87 92.67C365.87 110.88 362.65 117.16 357.32 123.18C349.15 132.14 337.26 134.84 314.35 134.84L248.58 134.84C225.67 134.84 213.76 132.14 205.6 123.18C200.27 117.16 197.05 110.88 197.05 92.67L197.05 42.17C197.05 23.97 200.27 17.7 205.6 11.67C213.77 2.7 225.67 0 248.58 0L314.35 0C337.26 0 349.15 2.7 357.32 11.67C362.65 17.7 365.87 23.97 365.87 42.17L365.87 92.67M312.73 101.65C321.53 101.65 324.63 101.13 326.74 99.21C328.71 97.42 329.58 95.11 329.58 87.41L329.58 47.43C329.58 39.73 328.71 37.44 326.74 35.64C324.63 33.71 321.53 33.2 312.73 33.2L250.19 33.2C241.39 33.2 238.29 33.71 236.19 35.64C234.21 37.44 233.34 39.73 233.34 47.43L233.34 87.41C233.34 95.11 234.21 97.42 236.19 99.21C238.29 101.13 241.39 101.65 250.19 101.65L312.73 101.65V101.65M421.85 2.18V133.18H381.6V2.18H421.85M489.85 2.18H542.99L471.27 63.45 552.16 133.18H495.3L421.85 64.86 489.85 2.18M559.58 2.18H599.84V133.18H559.58M753.31 133.18 741.4 110.36H663.51L651.74 133.17H607.27L678.62 2.18H728.66L800 133.18H753.31M677.5 81.91H727.55L702.52 34.48 677.5 81.91">
+								  </path>
+								</svg>
+							</div>
+						</div>
+						<div class="ic">
+							<div class="icn">
+								<ul class="icon-foot">
+								                          <li >
+								                <a data-linktype="footer" href="https://www.instagram.com/nokia/?hl=en" aria-label="Instagram (opens in a new window)" target="_blank" >
+								                  <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" focusable="false" class="cricle">
+								    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+								        <g fill="#ffffff" fill-rule="nonzero" transform="translate(12 11.5)">
+								            <path d="M8.5 1.531c2.27 0 2.54.01 3.435.048.829.038 1.278.177 1.579.294.397.156.68.339.977.636.298.297.48.58.636.978.118.3.256.75.294 1.58.041.895.048 1.164.048 3.435 0 2.27-.01 2.54-.048 3.435-.038.83-.176 1.279-.294 1.58-.155.397-.338.68-.636.977-.297.298-.58.48-.977.636-.301.118-.75.256-1.58.294-.894.042-1.164.048-3.434.048-2.27 0-2.54-.01-3.435-.048-.829-.038-1.278-.176-1.579-.294a2.648 2.648 0 0 1-.977-.636 2.648 2.648 0 0 1-.636-.978c-.118-.3-.256-.75-.294-1.579-.041-.895-.048-1.165-.048-3.435s.01-2.54.048-3.436c.038-.829.176-1.278.294-1.579.155-.397.338-.68.636-.978.297-.297.58-.48.977-.636.301-.117.75-.256 1.58-.294.898-.041 1.164-.048 3.434-.048zM8.5 0C6.192 0 5.902.01 4.996.052c-.905.041-1.523.186-2.062.394a4.168 4.168 0 0 0-1.507.981c-.473.47-.764.947-.981 1.504C.235 3.47.093 4.088.052 4.994.01 5.899 0 6.19 0 8.498c0 2.309.01 2.6.052 3.505.041.905.186 1.524.394 2.063.217.56.508 1.033.981 1.507.473.473.947.763 1.507.981.539.211 1.157.353 2.062.394.906.042 1.196.052 3.504.052s2.598-.01 3.504-.052c.905-.041 1.523-.186 2.062-.394a4.168 4.168 0 0 0 1.507-.981c.473-.474.764-.947.981-1.507.211-.54.353-1.158.394-2.063.042-.906.052-1.196.052-3.505 0-2.308-.01-2.599-.052-3.504-.041-.906-.186-1.524-.394-2.063a4.192 4.192 0 0 0-.978-1.504A4.168 4.168 0 0 0 14.07.446c-.54-.211-1.158-.353-2.063-.394C11.098.01 10.808 0 8.5 0z"></path>
+								            <path d="M8.5 4a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.422a2.921 2.921 0 1 1-.001-5.842 2.921 2.921 0 0 1 .001 5.842z"></path>
+								            <circle cx="13.5" cy="4.5" r="1.5"></circle>
+								        </g>
+								    </g>
+								</svg>
+								                </a>
+								              </li>
+								                          <li>
+								                <a data-linktype="footer" href="https://www.youtube.com/user/nokia" aria-label="Youtube (opens in a new window)" target="_blank">
+								                  <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" focusable="false" class="cricle2">
+								    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+								        <path fill="#FFF" fill-rule="nonzero" d="M28.336 16.404a2.39 2.39 0 0 0-2.166-2.176A69.554 69.554 0 0 0 20.425 14c-2.935 0-5.15.12-6.582.234a2.39 2.39 0 0 0-2.18 2.179c-.087.93-.163 2.159-.163 3.623 0 1.429.075 2.635.163 3.554a2.389 2.389 0 0 0 2.179 2.176c1.432.113 3.648.234 6.583.234 2.437 0 4.412-.116 5.745-.228a2.39 2.39 0 0 0 2.166-2.176c.088-.926.164-2.146.164-3.596 0-1.45-.076-2.67-.164-3.596zM18.11 22.52v-5.038L23.038 20l-4.928 2.519z"></path>
+								    </g>
+								</svg>
+								                </a>
+								              </li>
+								                          <li >
+								                <a href="#"><svg t="1649577971634" class="cricle3" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2402" width="5" height="5"><path d="M868.78260513 350.93851167c-4.19752479 316.58112364-206.64378348 533.42289687-508.84923077 547.04005471-124.62575954 5.70639316-214.91280228-34.551102-293.48715213-84.46745527 92.10982108 14.70125585 206.32520569-22.11723305 267.41045242-74.40833277-90.28704274-8.78247749-143.74276011-54.7393641-168.7552-128.69725356 26.08953618 4.51026781 53.57474644 3.31414245 78.36079771-1.93480569-81.47305755-27.27282508-139.65259487-77.62795213-142.6586621-183.14254588 22.8629151 10.40920798 46.6967339 20.19409687 78.36079772 22.12306782-60.97321937-34.68180056-106.05956011-161.46291966-54.42078633-245.29788718 90.49359316 99.18854928 199.34683533 180.12947692 378.08647293 191.07898346-44.87512251-191.83050029 209.33127293-295.85489687 315.7222473-166.92541994 44.97431338-8.70079088 81.58158405-25.7639567 116.79551453-44.33599088-14.49353846 44.54837607-42.40585299 75.68030997-76.43065983 100.58539031 37.3506188-5.04239772 70.41152364-14.16912593 98.65525243-28.12469971-17.51944388 36.39255157-55.82929687 69.02751909-88.78984388 96.50689458z" fill="#ffffff" p-id="2403"></path></svg></a>
+								              </li>
+								                          <li>
+								                <a data-linktype="footer" href="https://www.facebook.com/nokia/" aria-label="Facebook (opens in a new window)" target="_blank">
+								                  <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" focusable="false" class="cricle2">
+								    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+								        <path fill="#FFF" fill-rule="nonzero" d="M23.5 17.18h-2.384v-1.66c0-.623.39-.769.663-.769h1.683V12.01L21.145 12c-2.572 0-3.158 2.045-3.158 3.353v1.828H16.5v2.825h1.487V28h3.129v-7.994h2.111l.273-2.825z"></path>
+								    </g>
+								</svg>
+								                </a>
+								              </li>
+								                          <li>
+								                <a data-linktype="footer" href="https://www.linkedin.com/company/nokia" aria-label="LinkedIn (opens in a new window)" target="_blank">
+								                  <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" focusable="false" class="cricle">
+								    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+								        <g fill="#FFF" fill-rule="nonzero" transform="translate(13 13)">
+								            <path d="M3.733 13h-2.8V3.714h2.8V13zM14 13h-2.8V8.04c0-1.293-.463-1.936-1.38-1.936-.727 0-1.189.36-1.42 1.081V13H5.6s.037-8.357 0-9.286h2.21l.17 1.857h.059c.574-.928 1.491-1.558 2.75-1.558.956 0 1.73.265 2.32.93.595.666.891 1.559.891 2.813V13z"></path>
+								            <ellipse cx="2.333" cy="1.393" rx="1.447" ry="1.393"></ellipse>
+								        </g>
+								    </g>
+								</svg>
+								                </a>
+								              </li>
+								                      </ul>
+							</div>
+							<div class="media">
+								<a href="#"><p>See all of social media</p></a>
+							</div>
+							<div class="inbox">
+								<p>Get the latest from Nokia delivered straight to your inbox.</p>
+							</div>
+							<div class="sub">
+								<a href="#">
+								<div class="sub2">
+									<p>Subscribe</p>
+								</div>
+								</a>
+							</div>
+						</div>
+						<div class="blank-f"></div>
+						<div class="foot-box">
+							<ul>
+								<a href="#">
+								<h3 class="first">For business</h3>
+								<li>Nokia OZO</li>
+								<li>Licensing opportunities</li>
+								<li>Partners and ecosystems</li>
+								</a>
+							</ul>
+						</div>
+						<div class="foot-box">
+							<ul>
+								<a href="#">
+								<h3 class="first">For consumers</h3>
+								<li>Phones</li>
+								<li>Laptops</li>
+								<li>Smart TVs</li>
+								<li>Streaming devices</li>
+								<li>Home WiFi</li>
+								<li>Headphones</li>
+								</a>
+							</ul>
+						</div>
+						<div class="foot-box">
+							<ul>
+								<a href="#">
+								<h3 class="first">Innovation</h3>
+								<li>Nokia Bell Lads</li>
+								<li>Innovation platform</li>
+								<li>Open innovation ecosystem</li>
+								<li>NGP Capital</li>
+								</a>
+							</ul>
+						</div>
+						<div class="foot-box">
+							<ul>
+								<a href="#">
+								<h3 class="first">About us</h3>
+								<li>Company</li>
+								<li>Newsroom</li>
+								<li>Investors</li>
+								<li>Sustainability</li>
+								<li>Careers</li>
+								<li>Compliance</li>
+								</a>
+							</ul>
+						</div>
+						<div class="foot-box">
+							<ul>
+								<a href="#">
+								<h3 class="first">Contact and support</h3>
+								<li>Support</li>
+								<li>Extranet access</li>
+								<li>Developer resources and APls</li>
+								<li>Contact us</li>
+								</a>
+							</ul>
+						</div>
+						<div class="end">
+							<ul>
+								<a href="#">
+								<li>Cookies</li>
+								<li>Privacy</li>
+								<li>Inclusive terminology</li>
+								<li>Modem slavery statement</li>
+								<li>Terms</li>
+								</a>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
